@@ -1,0 +1,17 @@
+<!-- HTML -->
+<div id="clock"></div>
+
+<!-- JavaScript -->
+<script>
+  function updateClock() {
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var clockText = hours + ":" + minutes + ":" + seconds;
+    document.getElementById("clock").innerHTML = clockText;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+</script>
